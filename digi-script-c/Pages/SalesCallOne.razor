@@ -1,0 +1,515 @@
+﻿@page "/salescallone"
+@inject HttpClient Http
+
+<PageTitle>SalesCallOne</PageTitle>
+
+
+@*Intro Section Start*@
+<div id="OPEN" class="open_section">
+    <h1 class="headline">
+        <mark class="mark">Introduction</mark>
+    </h1>
+</div>
+@if (scriptContents == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var scriptContent in scriptContents)
+    {
+        @*Intro Card Content Area*@
+        <div class="card_content_area">
+            <div>
+                @*INTRO CARDS START*@
+                <div class="cards">
+                    <div class="card">
+
+                        @scriptContent.Attributes.Introduction
+
+                        @*HOOK BUTTONS*@
+                        <div class="grid">
+                            <button class="wrapper">
+                                ClICKWAY
+                                <div class="tooltip">
+                                    <h5>AB CLICK WAY HOOK</h5>
+                                    <p>Hook detail goes here</p>
+                                </div>
+                            </button>
+                        </div>
+
+                        @scriptContent.Attributes.InstructionsProductSignal
+
+                        <button class="wrapper">
+                            COMMON OBJECTIONS
+                            <div class="tooltip">
+                                <p>xObjection: I already have a loan...</p>
+                                <p>Response: Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                                <br />
+                                <p>Objection: I won't be able to afford another installment</p>
+                            </div>
+                        </button>
+                        <br />
+                        <br />
+                    </div>
+                    @*INTRO CARD END*@
+                    @*PRE-QUALIFICATION START*@
+                    <div class="card">
+                        <h2>Pre-Qualifying Questions &#129000;</h2>
+
+                        @scriptContent.Attributes.PreQualifyingQuestions
+
+                        <h2>Compliance Questions &#128997;</h2>
+
+                        @scriptContent.Attributes.ComplianceQuestions
+
+                        <div>
+                            <button class="wrapper">
+                                PRE-QUALIFICATION NOT MET
+                                <div class="tooltip">
+                                    <h5>PRE-QUALIFICATION NOT MET</h5>
+                                    I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                    Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                    imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                    Nunc pharetra tincidunt<br />
+                                    ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                    leo vitae dictum euismod.
+                                </div>
+                            </button>
+                        </div>
+                        <br />
+                        <div>
+                            <button class="wrapper">
+                                COMPLIANCE QUESTION FAQ'S'
+                                <div class="tooltip">
+                                    <h5>COMPLIANCE QUESTION FAQ'S'</h5>
+                                    I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                    Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                    imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                    Nunc pharetra tincidunt<br />
+                                    ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                    leo vitae dictum euismod.
+                                </div>
+                            </button>
+                        </div>
+                        <br />
+                        <div>
+                            <button class="wrapper">
+                                CUSTOMER DECLINE CREDIT CHECKS
+                                <div class="tooltip">
+                                    <h5>CUSTOMER DECLINE CREDIT CHECKS</h5>
+                                    I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                    Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                    imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                    Nunc pharetra tincidunt<br />
+                                    ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                    leo vitae dictum euismod.
+                                </div>
+                            </button>
+                        </div>
+
+                    </div>
+                    @*PRE-QUALIFICATION END*@
+                    <div class="card">
+                        <h2>Early Digital Migration &#129001;</h2>
+                        @scriptContent.Attributes.EarlyDigitalMigration
+                    </div>
+                </div>
+            </div>
+            @*INTRO CARDS END*@
+        </div>
+        @*Intro Card Content Area End*@
+
+    }
+
+}
+@*Intro Section End*@
+
+@*Application Section Start*@
+<div id="APPSTART" class="open_section">
+    <h1 class="headline">
+        <mark class="mark">APPLICATION START</mark>
+    </h1>
+</div>
+@if (scriptContents == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var scriptContent in scriptContents)
+    {
+        <div class="card_content_area">
+            <div>
+                <div class="cards">
+                    @*Customer Auth Card Start*@
+                    <div class="card">
+                        <h2>Customer Authentication &#128997;</h2>
+                        @scriptContent.Attributes.CustomerAuthentication
+                        <button class="wrapper">
+                            REFUSING INFO PROCESSING
+                            <div class="tooltip">
+                                <h5>REFUSING INFO PROCESSING</h5>
+                                I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                Nunc pharetra tincidunt<br />
+                                ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                leo vitae dictum euismod.
+                            </div>
+                        </button>
+                        <br />
+                        <h2>ID & V &#128997;</h2>
+                        @scriptContent.Attributes.IdentificationAndVerification
+                        <button class="wrapper">
+                            REFUSING INFO PROCESSING
+                            <div class="tooltip">
+                                <h5>REFUSING INFO PROCESSING</h5>
+                                I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                Nunc pharetra tincidunt<br />
+                                ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                leo vitae dictum euismod.
+                            </div>
+                        </button>
+                        <br />
+                        <button class="wrapper">
+                            POP-UP NOTIFICATION NOT RECIEVED
+                            <div class="tooltip">
+                                <h5>POP-UP NOTIFICATION NOT RECIEVED</h5>
+                                I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                Nunc pharetra tincidunt<br />
+                                ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                leo vitae dictum euismod.
+                            </div>
+                        </button>
+                        <br />
+                        <h2>Regulatory Statements &#128997;</h2>
+                        @scriptContent.Attributes.RegulatoryStatements
+                    </div>
+                    @*Customer Auth Card End*@
+                    @*Banking Details and Employer Card Start*@
+                    <div class="card">
+                        <h2>Banking Details &#128997;</h2>
+                        @scriptContent.Attributes.BankingDetails
+                        <button class="wrapper">
+                            BANKING DETAILS FAQ's
+                            <div class="tooltip">
+                                <h5>BANKING DETAILS FAQ's'</h5>
+                                I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                Nunc pharetra tincidunt<br />
+                                ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                leo vitae dictum euismod.
+                            </div>
+                        </button>
+                        <br />
+                        <h2>Bank Statements &#128997;</h2>
+                        @scriptContent.Attributes.BankStatements
+                        <button class="wrapper">
+                            CLIENT WANTS TO SEND BANK STATEMENTS
+                            <div class="tooltip">
+                                <h5>CLIENT WANTS TO SEND BANK STATEMENTS</h5>
+                                I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                Nunc pharetra tincidunt<br />
+                                ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                leo vitae dictum euismod.
+                            </div>
+                        </button>
+                        <br />
+                        <h2>Employer Details &#128997;</h2>
+                        @scriptContent.Attributes.EmployerDetails
+                        <button class="wrapper">
+                            PERSAL NUMBERS
+                            <div class="tooltip">
+                                <h5>PERSAL NUMBERS</h5>
+                                I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                Nunc pharetra tincidunt<br />
+                                ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                leo vitae dictum euismod.
+                            </div>
+                        </button>
+                        <br />
+                        <button class="wrapper">
+                            CONTRACT WORKERS
+                            <div class="tooltip">
+                                <h5>CONTRACT WORKERS</h5>
+                                I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                                Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                                imperdiet libero,in condimentum odio mauris sed metus.<br />
+                                Nunc pharetra tincidunt<br />
+                                ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                                leo vitae dictum euismod.
+                            </div>
+                        </button>
+                    </div>
+                    @*Banking Details and Employer Card Start*@
+                    @*Income and Expenses Start*@
+                    <div class="card">
+                        <h2>Income and Expenses &#128997;</h2>
+                        @scriptContent.Attributes.IncomeAndExpenses
+                    </div>
+                    @*Income and Expenses End*@
+                </div>
+            </div>
+        </div>
+
+    }
+}
+@*Application Section End*@
+
+@*Application Outcome Section Start*@
+<div id="APPOUTCOME" class="open_section">
+    <h1 class="headline">
+        <mark class="mark">APPLICATION OUTCOME</mark>
+    </h1>
+</div>
+@if (scriptContents == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var scriptContent in scriptContents)
+    {
+        <div class="card_content_area">
+            <div class="cards">
+                @*Pending Outcome Card*@
+                <div class="card">
+                    <h2>Pending Application Outcome &#128997;</h2>
+                    @scriptContent.Attributes.PendingApplicationOutcome
+                    <br />
+                    <button class="wrapper">
+                        MyWorld Card Collection
+                        <div class="tooltip">
+                            <h5>MyWorld Card Collection</h5>
+                            I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                            Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                            imperdiet libero,in condimentum odio mauris sed metus.<br />
+                            Nunc pharetra tincidunt<br />
+                            ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                            leo vitae dictum euismod.
+                        </div>
+                    </button>
+                    <br />
+                    @scriptContent.Attributes.CreditLifeCover
+                    <br />
+                    <button class="wrapper">
+                        CREDIT LIFE FAQ's
+                        <div class="tooltip">
+                            <h5>CREDIT LIFE FAQ's</h5>
+                            I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                            Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                            imperdiet libero,in condimentum odio mauris sed metus.<br />
+                            Nunc pharetra tincidunt<br />
+                            ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                            leo vitae dictum euismod.
+                        </div>
+                    </button>
+                    <br />
+                    <button class="wrapper">
+                        CREDIT LIFE COST
+                        <div class="tooltip">
+                            <h5>CREDIT LIFE COST</h5>
+                            I am a ldLorem ipsum dolor sit amet,consectetur adipiscing elit.<br />
+                            Nunc convallis,nisl vel venenatis molestie,lectus ligula<br />
+                            imperdiet libero,in condimentum odio mauris sed metus.<br />
+                            Nunc pharetra tincidunt<br />
+                            ligula nec finibus. Pellentesque ut congue elit. Praesent aliquam<br />
+                            leo vitae dictum euismod.
+                        </div>
+                    </button>
+                </div>
+                @*Pending Outcome Card End*@
+
+                @*Application Successful Outcome Card Start*@
+                <div class="card">
+                    <h2>Application Successful</h2>
+                    @scriptContent.Attributes.ApplicationSuccessfulOutcome
+                </div>
+                @*Application Successful Outcome Card End*@
+                @*Bureau Info and Documents Card Start*@
+                <div class="card">
+                    <h2>Bureau Information</h2>
+                    @scriptContent.Attributes.BureauInformation
+                    <br />
+                    @scriptContent.Attributes.Documentation
+                    <br />
+                    <h3>Email Instructions &#128236;</h3>
+                    <ul>
+                        <li>Customer ID Number in the subject line</li>
+                        <li>Email address: 123@abc.co.za</li>
+                    </ul>
+                    <h3>WhatsApp Instructions  &#128172;</h3>
+                    <ul>
+                        <li>Send a message saying 'hi' and follow the instructions sent to you.</li>
+                        <li>whatsapp: 0865 409 409</li>
+                    </ul>
+                </div>
+                @*Bureau Info and Documents Card End*@
+            </div>
+        </div>
+    }
+}
+
+@*Application Outcome Section End*@
+
+@*Close Out Protocol Section Start*@
+<div id="CLOSEOUT" class="open_section">
+    <h1 class="headline">
+        <mark class="mark">CLOSE-OUT PROTOCOL</mark>
+    </h1>
+</div>
+
+<div class="card_content_area">
+    <div class="cards">
+        <div class="card">
+            <h2><u>Next Steps</u></h2>
+            <h2>Digital Migration</h2>
+            <h4><u>If a Customer has the app</u></h4>
+            Occaecat consectetur est cillum Lorem voluptate culpa duis consequat cupidatat labore.
+            Ad pariatur excepteur Lorem aute nulla amet.
+            Adipisicing sit proident aliqua tempor sunt sint commodo.
+
+            <h4><u>When a Customer does not have the app</u></h4>
+            Occaecat consectetur est cillum Lorem voluptate culpa duis consequat cupidatat labore.
+            Ad pariatur excepteur Lorem aute nulla amet.
+            Adipisicing sit proident aliqua tempor sunt sint commodo.
+            <br />
+            Occaecat consectetur est cillum Lorem voluptate culpa duis consequat cupidatat labore.
+            Ad pariatur excepteur Lorem aute nulla amet.
+            Adipisicing sit proident aliqua tempor sunt sint commodo.
+
+
+
+            <h3>Debi-Check</h3>
+            You will receive a Debi-Check notification before finalization of your application is complete.
+            It is important to accept this auhtority, in order for us to deposit the funds into your account.
+            <br />
+            <h4><u>If Notification is not accepted ?</u></h4>
+            Laborum labore in anim cupidatat tempor ex ipsum Lorem do sunt mollit. Amet incididunt nulla reprehenderit consequat minim culpa fugiat nostrud incididunt commodo duis velit.
+            <br />
+            <h3>Expected waiting time</h3>
+            Aute ex sint ut irure officia ad laboris. Elit sunt pariatur elit exercitation. Eu aliqua ad eu id eiusmod id irure qui et ad consequat amet consectetur.
+            Et ea nisi ea laboris anim anim do magna esse. Ea veniam mollit id deserunt eiusmod.
+            <h4></h4>
+            Exercitation tempor Lorem incididunt aliqua dolore tempor amet aute veniam. Consequat nostrud excepteur tempor ullamco labore aute ut aliquip.
+            Veniam aliquip dolore do nisi consectetur et irure mollit elit nulla aliqua.
+            <h2>Create Expectation for Document(s)</h2>
+            <p />
+        </div>
+        <div class="card">
+            <h2>Card Delivery</h2>
+            Cupidatat ullamco exercitation fugiat qui ex proident non non quis. Deserunt eiusmod non enim laborum excepteur.
+            Reprehenderit veniam ut aliquip fugiat excepteur qui duis.
+            Elit voluptate aliqua tempor elit cupidatat dolor.
+            Amet nostrud deserunt culpa minim officia ex labore enim officia occaecat nulla quis qui magna.
+            Tempor esse amet est voluptate enim anim duis. Mollit amet dolore occaecat id adipisicing magna ad.
+            <h4><u>Deliver Steps</u></h4>
+            <ol>
+                <li>Excepteur minim laborum excepteur laboris esse tempor.</li>
+                <li>Esse voluptate deserunt deserunt officia ullamco cupidatat officia dolore occaecat.</li>
+                <li>Sit nostrud excepteur duis cupidatat culpa quis anim anim.</li>
+            </ol>
+            <h2><u>Fraud Alert</u></h2>
+            Mollit laboris adipisicing voluptate eu et consequat dolore qui reprehenderit amet reprehenderit sint.
+            Magna est culpa incididunt consectetur. Fugiat deserunt tempor sint mollit laboris veniam minim in.
+            Elit aliqua labore excepteur pariatur occaecat ullamco officia non nulla est Lorem ex.
+
+            <h2><u>Survey</u></h2>
+            <p>
+                Lorem consectetur laborum Lorem elit. Ipsum irure culpa incididunt incididunt culpa.
+                Et sint dolore Lorem reprehenderit sunt consequat ad enim quis.
+            </p>
+            <p>
+                Eu culpa excepteur aute aute sunt tempor magna Lorem.
+                Fugiat nostrud magna quis non labore sint consequat id nulla.
+                Pariatur ullamco quis cupidatat deserunt aute occaecat irure nostrud eu.
+            </p>
+            —CREATE EXPECTATION(DOCS)
+            --CONTRACT FINALIZATION
+        </div>
+    </div>
+</div>
+
+
+@*Close Out Protocol Section End*@
+
+@code {
+    private CallScriptContent[] scriptContents;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await Http.GetFromJsonAsync<RootObject>("http://127.0.0.1:1337/api/sales-first-calls");
+        if (response != null)
+        {
+            scriptContents = response.data.Select(d => new CallScriptContent
+            {
+                Attributes = d.attributes,
+
+            }).ToArray();
+        }
+    }
+
+    //RootObject: This class represents the root of the JSON response.
+    //It is used as a container for the data property.
+    //When you deserialize the JSON response, the RootObject class allows you to access the data property,
+    //which contains an array of Datum objects.
+
+    public class RootObject
+    {
+        public Datum[] data { get; set; }
+    }
+
+    //Datum: This class represents an individual item within the data array in the JSON response.
+    //Each Datum object has an id property and an attributes property.
+    //The id property is used to store the identifier, while the attributes property
+    //is used to store nested attributes within each item.
+    public class Datum
+    {
+        public int id { get; set; }
+        public Attributes attributes { get; set; }
+    }
+
+    public class CallScriptContent
+    {
+        public Attributes Attributes { get; set; }
+    }
+
+    public class Attributes
+    {
+        public string Introduction { get; set; }
+        public string InstructionsProductSignal { get; set; }
+        public string PreQualifyingQuestions { get; set; }
+        public string ComplianceQuestions { get; set; }
+        public string EarlyDigitalMigration { get; set; }
+        public string CustomerAuthentication { get; set; }
+        public string IdentificationAndVerification { get; set; }
+        public string RegulatoryStatements { get; set; }
+        public string BankingDetails { get; set; }
+        public string BankStatements { get; set; }
+        public string EmployerDetails { get; set; }
+        public string IncomeAndExpenses { get; set; }
+        public string PendingApplicationOutcome { get; set; }
+        public string CreditLifeCover { get; set; }
+        public string ApplicationSuccessfulOutcome { get; set; }
+        public string BureauInformation { get; set; }
+        public string Documentation { get; set; }
+
+    }
+}
+
+
+
+
+
+
+
